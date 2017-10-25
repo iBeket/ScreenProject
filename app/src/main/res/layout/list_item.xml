@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e6e6e6"
+    android:weightSum="1"
+    android:id="@+id/listid">
+
+    <TextView
+        android:id="@+id/letterTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6e6e6"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_weight="0.00" />
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bfbfbf" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:background="#fff"
+        android:layout_weight="0.01">
+
+        <ImageView
+            android:id="@+id/imageCfc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/title_cfc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/switch1"
+            android:layout_toRightOf="@+id/imageCfc"/>
+
+        <TextView
+            android:id="@+id/location_cfc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_cfc"
+            android:layout_marginLeft="5dp"
+            android:maxLines="1"
+            android:textColor="#000"
+            android:layout_toLeftOf="@+id/switch1"
+            android:layout_toRightOf="@+id/imageCfc"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:theme="@style/SCBSwitch"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="14dp"
+            android:layout_marginEnd="14dp" />
+    </RelativeLayout>
+</LinearLayout>
