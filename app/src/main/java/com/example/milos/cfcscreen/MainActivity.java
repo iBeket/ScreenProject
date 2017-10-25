@@ -49,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        AppState.isSwiped = false;
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(!AppState.isSwiped){
+                    Toast.makeText(MainActivity.this, "Please select on of the given causes", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         radioLocal = (RadioButton) findViewById(R.id.radio_local);
         radioLocal.setChecked(true);

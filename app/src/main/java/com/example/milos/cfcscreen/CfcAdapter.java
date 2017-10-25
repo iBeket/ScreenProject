@@ -1,14 +1,17 @@
 package com.example.milos.cfcscreen;
 
 import android.content.Context;
+import android.os.Build;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -39,6 +42,7 @@ public class CfcAdapter extends ArrayAdapter<CFCModel> {
     public int getCount() {
         return cfcModel.size();
     }
+
     @Nullable
     @Override
     public CFCModel getItem(int position) {
@@ -49,6 +53,7 @@ public class CfcAdapter extends ArrayAdapter<CFCModel> {
      * This method returns the row related view,
      * first, checks if the actual view (convertView) is set
      */
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -62,17 +67,16 @@ public class CfcAdapter extends ArrayAdapter<CFCModel> {
             convertView = inflater.inflate(resource, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.letterTv = convertView.findViewById(R.id.letterTv);
-            viewHolder.titleCfc =  convertView.findViewById(R.id.title_cfc);
-            viewHolder.locationCfc =  convertView.findViewById(R.id.location_cfc);
-            viewHolder.imageCfc =  convertView.findViewById(R.id.imageCfc);
+            viewHolder.titleCfc = convertView.findViewById(R.id.title_cfc);
+            viewHolder.locationCfc = convertView.findViewById(R.id.location_cfc);
+            viewHolder.imageCfc = convertView.findViewById(R.id.imageCfc);
             viewHolder.linear = convertView.findViewById(R.id.listid);
             viewHolder.switchCompat = convertView.findViewById(R.id.switch1);
 
             convertView.setTag(viewHolder);
         }/*
           If convertView already exists, just get the tag and set it in the viewHolder attribute
-        */
-        else {
+        */ else {
             viewHolder = (CfcAdapter.ViewHolder) convertView.getTag();
         }
         //Populate the row's layout
@@ -102,6 +106,18 @@ public class CfcAdapter extends ArrayAdapter<CFCModel> {
         Picasso.with(getContext())
                 .load(cfcModel.getImagecfc().substring(0, 4) + "s" + cfcModel.getImagecfc().substring(4))
                 .into(viewHolder.imageCfc);
+
+        final ViewHolder finalViewHolder = viewHolder;
+        viewHolder.switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(finalViewHolder.switchCompat.isChecked()){
+                    AppState.isSwiped =true;
+                }else {
+                    AppState.isSwiped =false;
+                }
+            }
+        });
 
         return convertView;
     }
