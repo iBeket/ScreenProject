@@ -111,11 +111,7 @@ public class CfcAdapter extends ArrayAdapter<CFCModel> {
         viewHolder.switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(finalViewHolder.switchCompat.isChecked()){
-                    AppState.isSwiped =true;
-                }else {
-                    AppState.isSwiped =false;
-                }
+                AppState.isSwiped = finalViewHolder.switchCompat.isChecked();
             }
         });
 

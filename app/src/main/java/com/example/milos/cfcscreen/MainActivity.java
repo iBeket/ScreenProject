@@ -2,7 +2,6 @@ package com.example.milos.cfcscreen;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(!AppState.isSwiped){
-                    Toast.makeText(MainActivity.this, "Please select on of the given causes", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Please select one of the given causes", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -142,8 +141,7 @@ public class MainActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(getApplicationContext(),
-                                    "Json parsing error: " + e.getMessage(),
+                            Toast.makeText(getApplicationContext(),"Json parsing error: " + e.getMessage(),
                                     Toast.LENGTH_LONG)
                                     .show();
                         }
