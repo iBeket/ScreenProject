@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bfbfbf"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/info_cfc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:layout_weight="0.5"
+        android:text="jdjdjgdugb" />
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+
+        <ImageView
+            android:id="@+id/image_screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="7.5"
+            android:background="#fff"
+            android:src="@drawable/b44" />
+
+        <View
+            android:id="@+id/line_in_between"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:background="#a6a6a6" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2">
+
+            <ProgressBar
+                android:id="@+id/circularProgressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="#FFF"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="15"
+                android:progressDrawable="@drawable/circular"
+                android:secondaryProgress="100" />
+
+            <TextView
+                android:id="@+id/progress_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:background="#fff"
+                android:text="$184"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/circularProgressbar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/circularProgressbar"
+                android:layout_below="@+id/circularProgressbar"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:background="#fff"
+                android:text="GOAL $800" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+
+        android:background="#fff"
+        android:gravity="center"
+        android:text="sfsfsdfsdf" />
+
+</LinearLayout>

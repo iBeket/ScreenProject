@@ -1,6 +1,7 @@
 package com.example.milos.cfcscreen;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!AppState.isSwiped){
                     Toast.makeText(MainActivity.this, "Please select one of the given causes", Toast.LENGTH_SHORT).show();
+                }else{
+                    startActivity(new Intent(MainActivity.this,ProgressBarActivity.class));
                 }
             }
         });
