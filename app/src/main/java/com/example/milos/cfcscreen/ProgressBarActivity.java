@@ -25,7 +25,7 @@ public class ProgressBarActivity extends AppCompatActivity {
 
         progressBar = (ProgressBar) findViewById(R.id.circularProgressbar);
         progressInfo = (TextView) findViewById(R.id.progress_info);
-        goalInfo = (TextView) findViewById(R.id.text_goal);
+       // goalInfo = (TextView) findViewById(R.id.text_goal);
 
         finalPercentage = (percentage * progress) / goal;
 

@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@android:id/secondaryProgress">
         <shape
-            android:innerRadiusRatio="3"
+            android:innerRadiusRatio="3.5"
             android:shape="ring"
             android:useLevel="true"
             android:thicknessRatio="14.0">
@@ -21,7 +21,7 @@
             android:pivotY="50%"
             android:toDegrees="270" >
             <shape
-                android:innerRadiusRatio="3"
+                android:innerRadiusRatio="3.5"
                 android:shape="ring"
                 android:useLevel="true"
                 android:thicknessRatio="14.0">
@@ -31,9 +31,9 @@
                     android:pivotX="50%"
                     android:pivotY="50%" />
                 <gradient
-                    android:startColor="#00FF00"
-                    android:endColor="#00FF00"
-                    android:centerColor="#00FF00"
+                    android:startColor="#5F65BB"
+                    android:endColor="#5F65BB"
+                    android:centerColor="#5F65BB"
                     android:type="sweep" />
             </shape>
         </rotate>
