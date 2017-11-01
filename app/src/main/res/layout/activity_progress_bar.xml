@@ -3,109 +3,317 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#bfbfbf"
+    android:background="#d9d9d9"
     android:orientation="vertical"
-    android:weightSum="10">
+    android:weightSum="100">
 
     <TextView
         android:id="@+id/info_cfc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
+        android:layout_weight="14.4"
         android:background="#fff"
         android:gravity="center"
         android:text="jdjdjgdugb" />
 
     <LinearLayout
-        android:id="@+id/lin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="2"
-        android:orientation="horizontal"
+        android:layout_weight="25.2"
+        android:orientation="vertical"
         android:weightSum="10">
 
-
-        <ImageView
-            android:id="@+id/image_screen"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="7"
-            android:background="#fff"
-            android:src="@drawable/b44" />
-
         <View
-            android:id="@+id/line_in_between"
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="7dp"
-            android:background="#a6a6a6" />
+            android:id="@+id/line_top"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#8c8c8c" />
 
-        <RelativeLayout
-            android:id="@+id/progress_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2.8">
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9.2"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <View
+                android:id="@+id/line_left"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="#8c8c8c" />
+
+            <ImageView
+                android:id="@+id/image_screen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:background="#fff"
+                android:src="@drawable/b44" />
+
+            <View
+                android:id="@+id/line_in_between"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#8c8c8c" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:id="@+id/progress_layout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/text_goal">
+                android:layout_weight="2.8">
 
-                <ProgressBar
-                    android:id="@+id/circularProgressbar"
-                    style="?android:attr/progressBarStyleHorizontal"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#FFF"
-                    android:indeterminate="false"
-                    android:max="100"
-                    android:padding="3dp"
-                    android:progress="15"
-                    android:progressDrawable="@drawable/circular"
-                    android:secondaryProgress="100" />
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/text_goal">
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:padding="3dp"
+                        android:progress="15"
+                        android:progressDrawable="@drawable/circular"
+                        android:secondaryProgress="100" />
+
+                    <TextView
+                        android:id="@+id/progress_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="$184"
+                        android:textColor="#5F65BB"
+                        android:textStyle="bold" />
+                </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/progress_info"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/text_goal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:background="#fff"
                     android:gravity="center"
-                    android:text="$184"
-                    android:textColor="#5F65BB"
+                    android:text="GOAL $800"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
+
             </RelativeLayout>
 
+            <View
+                android:id="@+id/line_right"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#8c8c8c" />
 
-            <TextView
-                android:id="@+id/text_goal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+        </LinearLayout>
 
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:background="#fff"
-                android:gravity="center"
-                android:text="GOAL $800"
-                android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="10dp"
+            android:background="#8c8c8c" />
 
-
-        </RelativeLayout>
     </LinearLayout>
 
     <TextView
+        android:id="@+id/initiative_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
+        android:layout_gravity="center"
+        android:layout_weight="6.4"
         android:background="#fff"
-        android:gravity="center"
         android:text="sfsfsdfsdf" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="42.3">
+
+        <LinearLayout
+            android:id="@+id/lin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5">
+
+                <TextView
+                    android:id="@+id/info_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Enter the purchase subtotal  before tax"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/subtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/donation_percent"
+                    android:layout_alignStart="@+id/donation_percent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="15dp"
+                    android:text="Subtotal"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/subtotal_sum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/subtotal"
+                    android:layout_alignBottom="@+id/subtotal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginStart="100dp"
+                    android:text="$0.00"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/donation_percent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="10% Donation Directive" />
+
+                <TextView
+                    android:id="@+id/percent_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/donation_percent"
+                    android:layout_alignBottom="@+id/donation_percent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="7dp"
+                    android:text="$0.00"
+                    android:textColor="#5F65BB"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line_between"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/lin_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#8c8c8c" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5">
+
+                <TextView
+                    android:id="@+id/take_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Take a photo of your itemized receipt."
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/photo_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/camera" />
+
+                <TextView
+                    android:id="@+id/or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_toLeftOf="@+id/photo_image"
+                    android:layout_toStartOf="@+id/photo_image"
+                    android:text="or" />
+
+                <TextView
+                    android:id="@+id/access_camera_roll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/take_photo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/take_photo"
+                    android:layout_marginBottom="20dp"
+                    android:text="Access Camera roll" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/access_camera_roll"
+                    android:layout_toEndOf="@+id/or"
+                    android:layout_toRightOf="@+id/or"
+                    android:src="@drawable/camera_roll" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="11.5"
+        android:background="#fff">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="28dp"
+            android:background="#3399ff"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
 </LinearLayout>
