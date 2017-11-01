@@ -230,10 +230,6 @@
                 android:id="@+id/line_between"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_below="@id/lin_layout"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
                 android:background="#8c8c8c" />
 
             <RelativeLayout
@@ -267,11 +263,10 @@
                     android:id="@+id/or"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/take_photo"
+                    android:layout_alignRight="@+id/take_photo"
                     android:layout_centerInParent="true"
-                    android:layout_marginEnd="13dp"
-                    android:layout_marginRight="13dp"
-                    android:layout_toLeftOf="@+id/photo_image"
-                    android:layout_toStartOf="@+id/photo_image"
+
                     android:text="or" />
 
                 <TextView
@@ -288,9 +283,9 @@
                     android:id="@+id/imageView2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/photo_image"
+                    android:layout_alignStart="@+id/photo_image"
                     android:layout_alignTop="@+id/access_camera_roll"
-                    android:layout_toEndOf="@+id/or"
-                    android:layout_toRightOf="@+id/or"
                     android:src="@drawable/camera_roll" />
 
 
